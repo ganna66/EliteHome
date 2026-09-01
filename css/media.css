@@ -13,13 +13,18 @@
     padding-top: 400px;
   }
 } */
-/* ========================================
-   TABLET
-======================================== */
+/* =========================================
+   TABLET + MOBILE
+========================================= */
 
 @media (max-width: 991.98px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-  /* Navbar */
+  /* NAVBAR */
   .navbar {
     --bs-navbar-padding-x: 1rem;
   }
@@ -28,107 +33,78 @@
     background-color: white;
     padding: 15px;
     margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-nav {
     gap: 0 !important;
   }
 
-  .nav-item {
-    margin: 5px 0;
-  }
+  /* ================= HERO ================= */
 
-  .nav-link.active {
-    border-bottom: none;
-  }
-
-  /* Hero */
   #hero-section {
     min-height: auto;
-    padding: 130px 20px 70px;
+    padding: 120px 20px 60px;
+    background-attachment: scroll;
   }
 
-  .head {
-    width: 90% !important;
+  #hero-section .head {
+    width: 100% !important;
+    max-width: 750px;
   }
 
-  .head h1 {
-    font-size: 45px;
+  #hero-section .head h1 {
     margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 45px;
   }
 
-  .head p {
-    font-size: 17px !important;
-  }
-
-  /* Search Form */
-  .form {
+  #hero-section > .form {
     width: 90%;
+    max-width: 750px;
   }
 
-  /* Statistics */
+  /* hero statistics */
   #hero-section > .container.row {
     width: 90% !important;
   }
 
-  /* Featured Cards */
+  /* ================= CARDS ================= */
+
   .cards .card {
     margin-bottom: 25px;
   }
 
-  .card-head {
-    align-items: center;
-  }
-
-  .card-title {
-    font-size: 28px !important;
-  }
-
-  /* Services */
-  #section-three {
-    padding-block: 70px;
-  }
-
-  #section-three .services {
-    width: 95%;
-  }
-
-  .nav-pills {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-
-  .home-content .left h3 {
-    font-size: 28px;
-  }
+  /* ================= SERVICES ================= */
 
   .home-content .right {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
+  /*
+    remove desktop fixed positioning
+  */
+  .home-content .success-rate,
   .home-content .success-rate.selling,
   .home-content .success-rate.invest {
-    left: auto;
-    right: 20px;
+    left: 20px;
+    right: auto;
+    bottom: -25px;
+    width: auto;
+    min-width: 130px;
   }
 
-  /* Testimonials */
+  /* ================= TESTIMONIALS ================= */
+
   .item {
     width: 80%;
   }
 
-  /* FAQ */
+  /* ================= FAQ ================= */
+
   .accordion-item {
     width: 90%;
   }
 
-  /* Contact */
-  .contact-information {
-    flex-direction: column;
-  }
+  /* ================= CONTACT ================= */
 
   .left-information,
   .right-info {
@@ -136,160 +112,135 @@
   }
 
   .right-info {
-    margin-top: 30px;
+    padding: 30px;
   }
 
-  /* Contact Cards */
-  .contacts-cards .card-body {
+  .right-info .form {
     width: 100%;
+    padding: 0;
   }
 
-  /* Decorative circles */
-  #get-in-touch .upper-circle {
-    right: 30px;
-  }
-
-  #get-in-touch .lower-circle {
-    left: 30px;
+  .contacts-cards .card-body {
+    width: auto;
   }
 }
 
 
-/* ========================================
+/* =========================================
    MOBILE
-======================================== */
+========================================= */
 
 @media (max-width: 767.98px) {
-
-  /* General */
   :root {
     --section-padding: 60px;
   }
 
-  body {
-    overflow-x: hidden;
-  }
+  /* ================= NAV ================= */
 
-  /* Navbar */
   .navbar {
-    --bs-navbar-padding-y: 0.7rem;
-    --bs-navbar-padding-x: 1rem;
+    --bs-navbar-padding-y: 0.75rem;
   }
 
   .navbar-brand {
     font-size: 1.3rem;
   }
 
-  .navbar-collapse {
-    padding: 10px;
-  }
+  /* ================= HERO ================= */
 
-  /* Hero Section */
   #hero-section {
-    padding: 110px 15px 50px;
-    min-height: auto;
+    padding: 100px 15px 50px;
   }
 
-  .head {
+  #hero-section .head {
     width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .head h1 {
+  #hero-section .head h1 {
     font-size: 34px;
     line-height: 1.2;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 
-  .head p {
+  #hero-section .head p {
     font-size: 15px !important;
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
-  /* Search Form */
-  .form {
+  /* Search box */
+  #hero-section > .form {
     width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding: 15px;
-    margin-top: 10px;
   }
 
-  .form > div {
+  #hero-section > .form > div {
     width: 100%;
   }
 
-  .location {
-    width: 100%;
-  }
-
-  .input-box {
-    font-size: 14px;
-  }
-
-  .dropdown,
-  .number {
+  #hero-section .dropdown,
+  #hero-section .number {
     width: 100% !important;
   }
 
-  .search-btn {
+  #hero-section .location,
+  #hero-section .choose-num,
+  #hero-section .dropdown > .dropdown {
     width: 100%;
+  }
+
+  #hero-section .input-box {
+    min-width: 0;
+  }
+
+  #hero-section .input-box::placeholder {
+    font-size: 12px;
   }
 
   /* Statistics */
   #hero-section > .container.row {
     width: 100% !important;
-    margin-top: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 25px;
+    gap: 25px 10px;
   }
 
-  #hero-section > .container.row h2 {
-    font-size: 25px !important;
+  #hero-section > .container.row > .col {
+    width: 100%;
   }
 
-  #hero-section > .container.row span {
-    font-size: 13px !important;
-  }
-
-
-  /* ========================================
-     SECTION 2 - FEATURED PROPERTIES
-  ======================================== */
-
-  #section-two {
-    padding-block: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  /* ================= SECTION HEADINGS ================= */
 
   .pill-div {
-    width: auto;
-  }
-
-  .pill-div span {
-    font-size: 14px;
+    width: 100%;
   }
 
   .pill-div span::before,
-  .pill-div span::after {
+  .pill-div span::after,
+  #comments .pill-div-2 span::before,
+  #comments .pill-div-2 span::after,
+  #help-center .pill-div-3 span::before,
+  #help-center .pill-div-3 span::after {
     display: none;
   }
 
-  #section-two h2,
-  #section-three h2 {
-    font-size: 35px;
+  .text-gradient,
+  .asked-question-head .get-Touch {
+    font-size: 32px;
   }
 
-  #section-two > div > p {
-    font-size: 15px !important;
-    line-height: 1.7;
-  }
-
-  #section-two > div > p br {
+  #section-two p br,
+  #get-in-touch p br {
     display: none;
   }
 
-  /* Cards */
+  /* ================= PROPERTY CARDS ================= */
+
   .cards {
     width: 100%;
   }
@@ -299,109 +250,73 @@
     margin-right: 0;
   }
 
-  .cards .col-12 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .card {
-    width: 100%;
-  }
-
   .villa-img {
-    height: 240px;
+    height: 230px;
   }
 
   .card-body {
-    padding: 15px;
+    padding: 16px;
   }
 
   .card-head {
     flex-direction: column;
     align-items: flex-start !important;
-    gap: 5px !important;
+    gap: 3px !important;
   }
 
   .card-title {
-    font-size: 25px !important;
-    margin-bottom: 0;
-  }
-
-  .card-head span {
-    font-size: 13px;
-  }
-
-  .card-text {
-    font-size: 14px;
-  }
-
-  .card-text p {
-    line-height: 1.6;
+    font-size: 24px !important;
   }
 
   .profile-data {
-    flex-direction: column;
-    align-items: stretch !important;
+    flex-wrap: wrap;
     gap: 15px;
   }
 
-  .profile {
-    justify-content: flex-start;
+  .profile-data .profile {
+    min-width: 0;
   }
 
-  .btn-schedule {
+  .profile-name {
+    overflow-wrap: anywhere;
+  }
+
+  /* ================= SERVICES ================= */
+
+  #section-three .services {
     width: 100%;
-    padding: 10px !important;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-
-  /* ========================================
-     SECTION 3 - SERVICES
-  ======================================== */
-
-  #section-three {
-    padding-block: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  #section-three > p {
-    font-size: 15px !important;
-    padding: 0 10px;
-  }
-
-  .services {
-    width: 100% !important;
-    padding: 0;
-  }
-
-  .nav-pills {
+  #section-three .nav-pills {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .nav-pills .nav-item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
+    gap: 5px;
   }
 
-  .nav-pills .nav-link {
+  #section-three .nav-pills .nav-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #section-three .nav-pills .nav-link {
     width: 100%;
     font-size: 14px;
-    padding: 10px 5px;
+    padding: 10px 4px;
+    white-space: normal;
   }
 
-  .nav-pills .nav-link i {
-    margin-right: 5px;
-  }
-
-  /* Service Content */
   .home-content {
-    margin: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .home-content .left {
-    padding: 0 !important;
+  .home-content .left,
+  .home-content .right {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .home-content .left h3 {
@@ -410,18 +325,13 @@
 
   .home-content .left p {
     font-size: 15px;
-    line-height: 1.7;
   }
 
-  .activity {
+  .activity > .d-flex {
     width: 100%;
   }
 
-  .activity .d-flex {
-    align-items: flex-start;
-  }
-
-  .activity-icon {
+  .activity .activity-icon {
     flex-shrink: 0;
   }
 
@@ -429,116 +339,57 @@
     min-width: 0;
   }
 
-  .activity .text span {
-    font-size: 16px !important;
-  }
-
-  .activity .text p {
-    font-size: 14px;
-  }
-
-  .activity .mt-5 {
-    margin-top: 30px !important;
-  }
-
   .activity .search-btn {
     width: 100%;
   }
 
-  /* Service Image */
-  .home-content .right {
-    padding: 0 !important;
-    margin-top: 40px;
-  }
-
   .img-wrapper {
-    height: 260px;
+    width: 100%;
+    height: 250px;
   }
 
+  /*
+    The desktop CSS uses left: 450px.
+    Never keep that on mobile.
+  */
   .home-content .success-rate,
   .home-content .success-rate.selling,
   .home-content .success-rate.invest,
   .success-rate.rent {
-    width: 45%;
-    left: auto;
-    right: 10px;
-    bottom: -25px;
-    padding: 8px 12px;
+    left: 10px;
+    right: auto;
+    bottom: -20px;
+    width: auto;
+    min-width: 120px;
   }
 
-  .home-content .success-rate p {
-    font-size: 20px !important;
-  }
-
-  .home-content .success-rate span {
-    font-size: 12px;
-  }
-
-
-  /* ========================================
-     TESTIMONIALS
-  ======================================== */
+  /* ================= TESTIMONIAL ================= */
 
   #comments {
-    padding-block: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  #comments .pill-div-2 span::before,
-  #comments .pill-div-2 span::after {
-    display: none;
-  }
-
-  #comments .said-comments {
-    font-size: 32px;
-  }
-
-  #comments .said p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .slider {
-    padding-top: 10px;
+    overflow: hidden;
   }
 
   .item {
-    width: 95%;
+    width: calc(100% - 30px);
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .carousel-inner {
     height: auto;
-    min-height: 450px;
+    min-height: 480px;
   }
 
   .carousel-item {
     height: auto;
+    min-height: 480px;
   }
 
-
-  /* ========================================
-     FAQ
-  ======================================== */
-
-  #help-center {
-    padding-block: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .carousel-item > div {
+    min-height: 480px;
   }
 
-  #help-center .pill-div-3 span::before,
-  #help-center .pill-div-3 span::after {
-    display: none;
-  }
-
-  #help-center .asked-question-head h2 {
-    font-size: 34px;
-  }
-
-  #help-center .asked-question-head p {
-    font-size: 15px;
-  }
+  /* ================= FAQ ================= */
 
   .accordion {
     width: 100%;
@@ -549,44 +400,16 @@
   }
 
   .accordion-header button {
+    padding: 18px;
     font-size: 16px;
-    padding: 18px 15px;
   }
 
-  .accordion-body p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-
-  /* ========================================
-     CONTACT
-  ======================================== */
+  /* ================= CONTACT ================= */
 
   #get-in-touch {
-    padding-block: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+    overflow: hidden;
   }
 
-  .asked-question-head {
-    padding: 0 !important;
-  }
-
-  .asked-question-head .get-Touch {
-    font-size: 35px;
-  }
-
-  .asked-question-head p {
-    font-size: 15px !important;
-    line-height: 1.7;
-  }
-
-  .asked-question-head p br {
-    display: none;
-  }
-
-  /* Hide decorative shapes on mobile */
   #get-in-touch::before,
   #get-in-touch::after,
   #get-in-touch .upper-circle,
@@ -594,135 +417,158 @@
     display: none;
   }
 
-  /* Contact Cards */
+  #get-in-touch .asked-question-head {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .contacts-cards {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
+  /*
+    You gave card-body a fixed 16rem width.
+  */
   .contacts-cards .card-body {
     width: 100%;
-    margin: 0;
-  }
-
-  /* Contact Information */
-  .contact-information {
-    width: 100%;
+    max-width: 100%;
   }
 
   .left-information {
     width: 100%;
   }
 
+  .contact-data-two {
+    width: 100%;
+  }
+
+  .data-for {
+    min-width: 0;
+  }
+
+  .data-for .data {
+    min-width: 0;
+  }
+
+  .data-for .data span,
+  .data-for .data a {
+    overflow-wrap: anywhere;
+  }
+
+  .needed-contact-data .connect-with-us {
+    padding: 22px;
+  }
+
   .right-info {
     width: 100%;
     padding: 20px;
-    margin-top: 25px;
+    margin-top: 30px !important;
   }
 
-  .right-info h3 {
-    font-size: 25px;
+  .right-info .form {
+    width: 100%;
+    padding: 0;
   }
 
-  .right-info input {
-    font-size: 14px;
+  /*
+    IMPORTANT:
+    HTML has row-cols-2.
+    Change it to one column on mobile.
+  */
+  .right-info .form .row-cols-2 {
+    --bs-columns: 1;
   }
 
-  .send-msg-bottom {
-    padding: 14px 20px;
+  .right-info .form .row-cols-2 > * {
+    width: 100%;
   }
 
+  .right-info input,
+  .right-info select,
+  .right-info textarea {
+    width: 100%;
+    max-width: 100%;
+  }
 
-  /* ========================================
-     FOOTER
-  ======================================== */
+  .right-info .form-check {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
 
-  #footer {
-    padding-block: 40px;
+  .right-info .form-check-input {
+    flex-shrink: 0;
+  }
+
+  .right-info .form-check-label {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .last-span {
     text-align: center;
   }
+
+  /* ================= FOOTER ================= */
 
   #footer .top {
     text-align: center !important;
   }
 
-  #footer .top > * {
-    width: 100%;
-  }
-
-  .footer-elite-span {
-    font-size: 22px !important;
-  }
-
   .social-media.footer {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .lower-foot {
-    margin-top: 20px;
-  }
-
 }
 
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
 
 @media (max-width: 480px) {
-
-  /* Hero */
-  .head h1 {
+  #hero-section .head h1 {
     font-size: 29px;
   }
 
-  .head p {
+  #hero-section .head p {
     font-size: 14px !important;
   }
 
-  /* Statistics */
-  #hero-section > .container.row {
-    grid-template-columns: 1fr 1fr;
+  #hero-section > .form {
+    padding: 12px;
   }
 
   #hero-section > .container.row h2 {
-    font-size: 21px !important;
+    font-size: 22px !important;
   }
 
   #hero-section > .container.row span {
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
 
-  /* Section titles */
-  #section-two h2,
-  #section-three h2 {
-    font-size: 30px;
+  .text-gradient,
+  .asked-question-head .get-Touch {
+    font-size: 28px;
   }
 
-  /* Cards */
   .villa-img {
     height: 210px;
   }
 
+  .card-body {
+    padding: 13px;
+  }
+
   .card-title {
-    font-size: 22px !important;
+    font-size: 21px !important;
   }
 
-  .camera-data {
-    left: 10px;
-    bottom: 10px;
+  .card-text {
+    font-size: 13px;
   }
 
-  .heart-pic {
-    right: 10px;
-  }
-
-  /* Services */
-  .nav-pills {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .nav-pills .nav-link {
+  #section-three .nav-pills .nav-link {
     font-size: 12px;
   }
 
@@ -731,30 +577,34 @@
   }
 
   .img-wrapper {
-    height: 220px;
+    height: 210px;
   }
 
-  /* Testimonials */
+  .activity .d-flex {
+    gap: 10px !important;
+  }
+
+  .activity .activity-icon {
+    padding: 10px 8px;
+  }
+
   .item {
-    width: 100%;
-  }
-
-  .carousel-inner {
-    min-height: 400px;
-  }
-
-  /* FAQ */
-  .accordion-header button {
-    font-size: 14px;
-  }
-
-  /* Contact */
-  .asked-question-head .get-Touch {
-    font-size: 30px;
+    width: calc(100% - 20px);
   }
 
   .right-info {
     padding: 15px;
   }
 
+  .right-info h3 {
+    font-size: 23px;
+  }
+
+  .needed-contact-data .connect-with-us {
+    padding: 18px;
+  }
+
+  .social-media a {
+    margin: 2px;
+  }
 }
